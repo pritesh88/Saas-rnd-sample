@@ -54,7 +54,7 @@ ENV DJANGO_DEBUG=${DJANGO_DEBUG}
 # such as:
 
 RUN python manage.py vendor_pull
-RUN sed -i '/sourceMappingURL=flowbite.min.js.map/d' static/vendors/flowbite.min.js
+RUN find /code -name "flowbite.min.js" -exec sed -i '/sourceMappingURL=flowbite.min.js.map/d' {} \;
 RUN python manage.py collectstatic --noinput
 # whitenoise -> s3
 
