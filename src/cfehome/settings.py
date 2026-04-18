@@ -28,7 +28,7 @@ EMAIL_USE_TLS = config("EMAIL_USE_TLS", cast=bool, default=True)  # Use EMAIL_PO
 EMAIL_USE_SSL = config("EMAIL_USE_SSL", cast=bool, default=False)  # EUse MAIL_PORT 465 for SSL
 
 #  500 errors
-ADMINS = [('Tanvi', 'tanviwadekar07@gmail.com')]
+ADMINS = [('pritesh', 'plad705@gmail.com')]
 MANAGERS = ADMINS
 
 # ADMIN_USER_NAME=config("ADMIN_USER_NAME", default="Admin user")
@@ -68,18 +68,16 @@ if DEBUG:
 
 
 # Application definition
-
 INSTALLED_APPS = [
-    #django -apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # my-apps
-    "commando",
-    "visits",
+
+    'commando',
+    'visits',
 ]
 
 MIDDLEWARE = [
