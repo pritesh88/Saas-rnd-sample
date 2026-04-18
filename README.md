@@ -5,4 +5,4 @@ The goal of this project is to learn how to create a reusable foundation for bui
 
 
 
-The goal of this project is to learn how to create a reusable foundation for building SaaS products. When release, this course will span multiple topics and give you a solid foundation into build your business.
+
