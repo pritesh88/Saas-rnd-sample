@@ -84,6 +84,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'allauth.socialaccount.providers.github',
     "widget_tweaks",
     "slippers",
 ]
@@ -179,8 +180,12 @@ AUTHENTICATION_BACKENDS = [
  ]
  
 SOCIALACCOUNT_PROVIDERS = {
-
+    "github": {
+        "SCOPE": ["user", "email"],
+    }
 }
+
+ACCOUNT_EMAIL_REQUIRED = False
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
