@@ -1,7 +1,7 @@
 import pathlib
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from django.contrib.auth.decorators import login_required
 from visits.models import PageVisit
 
 this_dir = pathlib.Path(__file__).resolve().parent
@@ -65,3 +65,7 @@ def pw_protected_view(request, *args, **kwargs):
         return render(request, "protected/view.html", {})
     
     return render(request, "protected/entry.html", {})
+
+@login_required
+def user_only_view(request, *args, **kwargs): 
+    return render(request,"protected/user-only.html", {})
